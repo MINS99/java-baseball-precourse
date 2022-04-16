@@ -13,14 +13,14 @@ public class Position {
         this.position = position;
     }
 
-    public int getPosition() {
-        return position;
-    }
-
     private void invalidPositionCheck(int position) {
         if (position < MIN_INDEX || position > MAX_INDEX) {
             throw new IllegalArgumentException(POSITION_ERROR_MESSAGE);
         }
+    }
+
+    public int getPosition() {
+        return position;
     }
 
     @Override
