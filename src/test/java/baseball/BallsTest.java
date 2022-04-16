@@ -44,6 +44,15 @@ public class BallsTest {
     }
 
     @ParameterizedTest
+    @CsvSource({"012", "102", "120"})
+    void Balls_객체는_숫자_중_0이_있으면_오류를_발생시킨다(String input) {
+        // given & when & then
+        assertThatIllegalArgumentException().isThrownBy(
+                () -> Balls.newInstance(input)
+        );
+    }
+
+    @ParameterizedTest
     @CsvSource({"112", "122", "111", "131"})
     void Balls_객체는_숫자에_중복이_있으면_오류를_발생시킨다(String input) {
         // given & when & then

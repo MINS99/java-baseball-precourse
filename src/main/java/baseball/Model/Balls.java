@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Balls {
     private final List<Ball> balls;
-    private static final String REG_NUMBER = "[0-9]+";
+    private static final String REGEX_NUMBER = "[1-9]+";
     private static final String INVALID_INPUT_MESSAGE = "입력하는 값은 3자리의 숫자여야 합니다.";
     private static final String DUP_NUM_MESSAGE = "값은 중복으로 입력할 수 없습니다.";
 
@@ -22,7 +22,7 @@ public class Balls {
     }
 
     private static void invalidNumberCheck(String input) {
-        if (input == null || input.length() != 3 || !input.matches(REG_NUMBER)) {
+        if (input == null || input.length() != 3 || !input.matches(REGEX_NUMBER)) {
             throw new IllegalArgumentException(INVALID_INPUT_MESSAGE);
         }
     }
