@@ -14,19 +14,19 @@
 
 ## 기능 구현 사항
 - Position
-  - [ ] 순서 정보를 가지고 있다
-  - [ ] 순서 정보는 1과 3 사이의 숫자이다
-  - [ ] 순서 정보가 1과 3 사이가 아닌 경우 IllegalArgumentException을 발생시킨다.
+  - [x] 순서 정보를 가지고 있다
+  - [x] 순서 정보는 1과 3 사이의 숫자이다
+  - [x] 순서 정보가 1과 3 사이가 아닌 경우 IllegalArgumentException을 발생시킨다.
 - Number
-  - [ ] 입력 값 정보를 가지고 있다
-  - [ ] 입력 값은 1부터 9 사이의 숫자로 이루어져 있다.
-  - [ ] 입력 값이 1부터 9 사이의 숫자가 아닌 경우 IllegalArgumentException을 발생시킨다.
+  - [x] 입력 값 정보를 가지고 있다
+  - [x] 입력 값은 1부터 9 사이의 숫자로 이루어져 있다.
+  - [x] 입력 값이 1부터 9 사이의 숫자가 아닌 경우 IllegalArgumentException을 발생시킨다.
 - Ball
-  - [ ] 순서 정보인 Position과 입력 값 정보인 Number를 가지고 있다
+  - [x] 순서 정보인 Position과 입력 값 정보인 Number를 가지고 있다
 - Balls
-  - [ ] 3개의 Ball 객체 리스트를 가지고 있다.
-  - [ ] 입력 값이 3자리로 이루어진 숫자가 아닌 경우 IllegalArgumentException을 발생시킨다.
-  - [ ] 3자리 값 중 2자리 이상 중복되는 경우 IllegalArgumentException을 발생시킨다.
+  - [x] 3개의 Ball 객체 리스트를 가지고 있다.
+  - [x] 입력 값이 3자리로 이루어진 숫자가 아닌 경우 IllegalArgumentException을 발생시킨다.
+  - [x] 3자리 값 중 2자리 이상 중복되는 경우 IllegalArgumentException을 발생시킨다.
 - BallStatus
   - [ ] 게임에서 사용하는 힌트 정보를 가지고 있다(STRIKE, BALL, NOTHING)
 - Player
