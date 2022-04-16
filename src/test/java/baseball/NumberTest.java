@@ -1,10 +1,10 @@
 package baseball;
 
 import baseball.Model.Number;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;
 
 public class NumberTest {
@@ -18,7 +18,7 @@ public class NumberTest {
         int output = number.getNumber();
 
         // then
-        Assertions.assertThat(input).isEqualTo(output);
+        assertThat(input).isEqualTo(output);
     }
 
     @ParameterizedTest
