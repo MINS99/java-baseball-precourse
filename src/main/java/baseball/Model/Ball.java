@@ -11,6 +11,10 @@ public class Ball {
         this.number = new Number(number);
     }
 
+    public Number getNumber() {
+        return number;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
