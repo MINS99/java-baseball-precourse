@@ -9,7 +9,8 @@ public class Balls {
     private final List<Ball> balls;
     private static final String REGEX_NUMBER = "[1-9]+";
     private static final String INVALID_INPUT_MESSAGE = "입력하는 값은 3자리의 숫자여야 합니다.";
-    private static final String DUP_NUM_MESSAGE = "값은 중복으로 입력할 수 없습니다.";
+    private static final String SPLIT_VALUE = "";
+    private static final String DUPLICATED_NUM_MESSAGE = "값은 중복으로 입력할 수 없습니다.";
 
     private Balls(List<Ball> balls) {
         this.balls = balls;
@@ -28,9 +29,9 @@ public class Balls {
     }
 
     private static void duplicateNumberCheck(String input) {
-        LinkedHashSet<String> checkSet = new LinkedHashSet<>(Arrays.asList(input.split("")));
+        LinkedHashSet<String> checkSet = new LinkedHashSet<>(Arrays.asList(input.split(SPLIT_VALUE)));
         if (checkSet.size() != input.length()) {
-            throw new IllegalArgumentException(DUP_NUM_MESSAGE);
+            throw new IllegalArgumentException(DUPLICATED_NUM_MESSAGE);
         }
     }
 
