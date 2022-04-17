@@ -1,6 +1,6 @@
 package baseball;
 
-import baseball.Model.Ball;
+import baseball.model.Ball;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
