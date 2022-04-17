@@ -12,37 +12,41 @@
 + 게임을 종료한 후 게임을 다시 시작하거나 완전히 종료할 수 있다.
 + 사용자가 잘못된 값을 입력할 경우 IllegalArgumentException을 발생시킨 후 애플리케이션은 종료되어야 한다.
 
-## 기능 구현 사항
+## 기능(Model) 구현 사항
 - Position
-  - [x] 순서 정보를 가지고 있다
-  - [x] 순서 정보는 1과 3 사이의 숫자이다
+  - [x] 순서 정보를 가지고 있다.
+  - [x] 순서 정보는 1과 3 사이의 숫자이다.
   - [x] 순서 정보가 1과 3 사이가 아닌 경우 IllegalArgumentException을 발생시킨다.
 - Number
-  - [x] 입력 값 정보를 가지고 있다
+  - [x] 입력 값 정보를 가지고 있다.
   - [x] 입력 값은 1부터 9 사이의 숫자로 이루어져 있다.
   - [x] 입력 값이 1부터 9 사이의 숫자가 아닌 경우 IllegalArgumentException을 발생시킨다.
 - Ball
-  - [x] 순서 정보인 Position과 입력 값 정보인 Number를 가지고 있다
+  - [x] 순서 정보인 Position과 입력 값 정보인 Number를 가지고 있다.
 - Balls
   - [x] 3개의 Ball 객체 리스트를 가지고 있다.
   - [x] 입력 값이 3자리로 이루어진 숫자가 아닌 경우 IllegalArgumentException을 발생시킨다.
   - [x] 3자리 값 중 2자리 이상 중복되는 경우 IllegalArgumentException을 발생시킨다.
 - BallStatus
-  - [ ] 게임에서 사용하는 힌트 정보를 가지고 있다(STRIKE, BALL, NOTHING)
-- Player
-  - [ ] Balls 객체를 가지고 있다.
-  - [ ] 입력을 할 때마다 Balls는 변경된다.
+  - [x] 게임에서 사용하는 힌트 정보를 가지고 있다(NOTHING, BALL, STRIKE)
+- GameStatus
+  - [x] 게임의 현재 상태 정보를 가지고 있다.
+    + FINISHED : 게임이 끝나고 계속 진행할지 끝낼지 입력을 기다리는 중
+    + PROGRESS : 게임이 진행중
+    + END : 게임이 완전히 종료됨
 - Game
-  - [ ] 게임이 시작될 때 컴퓨터의 입력값인 Balls 객체와 사용자 객체인 Player를 가진다.
+  - [ ] 게임에서 필요한 정보(컴퓨터의 입력 값, 게임의 상태 정보)를 가지고 있다.
+  - [ ] View에서 전달 받은 사용자의 입력 값과 컴퓨터의 입력 값을 비교하여 결과를 View에 전달한다.
   - 상대방(컴퓨터)의 수가 425일 때,
     + [ ] 123을 제시한 경우 : 1스트라이크
     + [ ] 456을 제시한 경우 : 1볼 1스트라이크
     + [ ] 789를 제시한 경우 : 낫싱
-  - [ ] GameResult에 따라 게임을 계속 진행하거나 끝낸다.
-- GameResult
-  - [ ] 게임 플레이어가 입력한 숫자에 대한 결과를 출력한다.
-- GameStatus
-  - [ ] 게임이 종료된 후 게임의 상태 정보를 가지고 있다(END, RESTART)
+
+## 화면(View) 구현 사항
+- GameInput
+  - 사용자의 입력과 관련된 기능 수행.
+- GameOutput
+  - 사용자의 입력결과에 대한 출력과 관련된 기능 수행.
 
 ## 프로그래밍 요구사항1 - 제약사항
 + 숫자 야구게임을 실행하는 시작점은 `src/main/java` 폴더의 `baseball.Application`의 `main()`이다. 
