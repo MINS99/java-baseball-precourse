@@ -1,16 +1,15 @@
 package baseball;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import baseball.model.BallStatus;
 import baseball.model.Game;
 import baseball.model.GameStatus;
+import java.util.Collections;
+import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-
-import java.util.Collections;
-import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 public class GameTest {
 

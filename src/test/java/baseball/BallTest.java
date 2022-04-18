@@ -1,10 +1,10 @@
 package baseball;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import baseball.model.Ball;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 public class BallTest {
     @ParameterizedTest
