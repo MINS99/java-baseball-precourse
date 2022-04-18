@@ -1,7 +1,6 @@
 package baseball.view;
 
 import baseball.model.BallStatus;
-
 import java.util.Collections;
 import java.util.List;
 
@@ -16,13 +15,13 @@ public class GameOutput {
     }
 
     public void printResult(int strike, int ball) {
-        if(ball > 0) {
+        if (ball > 0) {
             System.out.print(ball + "볼 ");
         }
-        if(strike > 0) {
+        if (strike > 0) {
             System.out.print(strike + "스트라이크");
         }
-        if(strike == 0 && ball == 0) {
+        if (strike == 0 && ball == 0) {
             System.out.print("낫싱");
         }
         System.out.println();

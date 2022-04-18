@@ -38,7 +38,7 @@ public class Balls {
     private static List<Ball> createBalls(String input) {
         List<Ball> newBalls = new ArrayList<>();
         for (int index = 1; index <= input.length(); index++) {
-            newBalls.add(new Ball(index, input.charAt(index-1) - '0'));
+            newBalls.add(new Ball(index, input.charAt(index - 1) - '0'));
         }
         return newBalls;
     }

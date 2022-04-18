@@ -3,10 +3,9 @@ package baseball.controller;
 import baseball.model.BallStatus;
 import baseball.model.Game;
 import baseball.model.GameStatus;
+import baseball.utils.RandomGenerator;
 import baseball.view.GameInput;
 import baseball.view.GameOutput;
-import baseball.utils.RandomGenerator;
-
 import java.util.List;
 
 public class BaseballGameController {

@@ -20,7 +20,7 @@ public class Game {
     public List<BallStatus> input(String input) {
         Balls player = Balls.newInstance(input);
         List<BallStatus> result = compareBalls(computer, player);
-        if(Collections.frequency(result, BallStatus.STRIKE) == 3) {
+        if (Collections.frequency(result, BallStatus.STRIKE) == 3) {
             gameStatus = GameStatus.FINISHED;
         }
         return result;
@@ -39,15 +39,15 @@ public class Game {
         if (index != -1 && computer.getBalls().get(index).equals(player)) {
             return BallStatus.STRIKE;
         }
-        if(isBall(computer, player)) {
+        if (isBall(computer, player)) {
             return BallStatus.BALL;
         }
         return BallStatus.NOTHING;
     }
 
     private boolean isBall(Balls computer, Ball player) {
-        for(Ball comBall : computer.getBalls()) {
-            if(comBall.getNumber().equals(player.getNumber())) {
+        for (Ball comBall : computer.getBalls()) {
+            if (comBall.getNumber().equals(player.getNumber())) {
                 return true;
             }
         }
@@ -56,10 +56,10 @@ public class Game {
 
     public void end(String input) {
         invalidNumberCheck(input);
-        if(input.equals("1")) {
+        if (input.equals("1")) {
             gameStatus = GameStatus.PROGRESS;
         }
-        if(input.equals("2")) {
+        if (input.equals("2")) {
             gameStatus = GameStatus.END;
         }
     }
