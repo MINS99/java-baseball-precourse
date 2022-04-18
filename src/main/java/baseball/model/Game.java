@@ -46,12 +46,11 @@ public class Game {
     }
 
     private boolean isBall(Balls computer, Ball player) {
+        boolean ball = false;
         for (Ball comBall : computer.getBalls()) {
-            if (comBall.getNumber().equals(player.getNumber())) {
-                return true;
-            }
+            ball = ball || comBall.getNumber().equals(player.getNumber());
         }
-        return false;
+        return ball;
     }
 
     public void end(String input) {
